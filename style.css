@@ -56,3 +56,10 @@ body {
   transform: rotate(calc(30deg * var(--i)));
   text-align: center;
 }
+
+.clockOne span > * {
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
+}
