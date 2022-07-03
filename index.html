@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script src="./script.js" defer></script>
+
     <link rel="stylesheet" href="./style.css" />
 
     <title>Neon clocks - created by lilKriT</title>
@@ -25,9 +27,15 @@
         <span style="--i: 11"><b>11</b></span>
         <span style="--i: 12"><b>12</b></span>
 
-        <div class="circle outer" style="--color: #40e0d0"><i></i></div>
-        <div class="circle middle" style="--color: #ff8c00"><i></i></div>
-        <div class="circle inner" style="--color: #ff0080"><i></i></div>
+        <div class="circle outer" id="seconds" style="--color: #40e0d0">
+          <i></i>
+        </div>
+        <div class="circle middle" id="minutes" style="--color: #ff8c00">
+          <i></i>
+        </div>
+        <div class="circle inner" id="hours" style="--color: #ff0080">
+          <i></i>
+        </div>
       </div>
     </section>
   </body>
