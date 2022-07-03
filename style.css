@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
+:root {
+  --dark-gray: #434343;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,3 +14,37 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.neonOne {
+  min-height: 100vh;
+  background-color: var(--dark-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clockOne {
+  width: 28.125rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--dark-gray);
+  position: relative;
+
+  box-shadow: 10px 50px 70px rgb(0 0 0 / 0.3),
+    inset 5px 5px 10px rgb(0 0 0 / 0.5), inset 5px 5px 20px rgb(0 0 0 / 0.2),
+    inset -5px -5px 15px rgb(0 0 0 / 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clockOne::before {
+  content: "";
+  width: 8px;
+  aspect-ratio: 1;
+  position: absolute;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: var(--dark-gray);
+}
