@@ -48,3 +48,11 @@ body {
   border-radius: 50%;
   background-color: var(--dark-gray);
 }
+
+.clockOne span {
+  position: absolute;
+  color: #fff;
+  inset: 20px;
+  transform: rotate(calc(30deg * var(--i)));
+  text-align: center;
+}
