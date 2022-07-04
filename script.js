@@ -17,11 +17,16 @@ setInterval(() => {
 const seconds2 = document.querySelector(".neonTwo .seconds");
 const minutes2 = document.querySelector(".neonTwo .minutes");
 const hours2 = document.querySelector(".neonTwo .hours");
+const timeOfDay2 = document.querySelector(".neonTwo .ampm");
 
-let h2 = new Date().getHours();
-let m2 = new Date().getMinutes();
-let s2 = new Date().getSeconds();
+setInterval(() => {
+  let h2 = new Date().getHours() % 12;
+  let m2 = new Date().getMinutes();
+  let s2 = new Date().getSeconds();
+  let ampm2 = h2 >= 12 ? "pm" : "am";
 
-hours2.innerHTML = h2;
-minutes2.innerHTML = m2;
-seconds2.innerHTML = s2;
+  hours2.innerHTML = String(h2).padStart(2, "0");
+  minutes2.innerHTML = String(m2).padStart(2, "0");
+  seconds2.innerHTML = String(s2).padStart(2, "0");
+  timeOfDay2.innerHTML = ampm2;
+});
