@@ -128,3 +128,38 @@ body {
   gap: 40px;
   color: #fff;
 }
+
+.clockTwo .circle {
+  position: relative;
+  width: 150px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clockTwo .circle svg {
+  position: relative;
+  width: 150px;
+  aspect-ratio: 1;
+}
+
+.clockTwo .circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: #191919;
+  stroke-width: 4;
+  transform: translate(5px, 5px);
+}
+
+.clockTwo .circle svg circle:nth-child(2) {
+  stroke: var(--color);
+}
+
+.clockTwo .circle > div {
+  position: absolute;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
