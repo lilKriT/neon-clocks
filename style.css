@@ -115,7 +115,7 @@ body {
   box-shadow: 0 0 20px var(--color), 0 0 60px var(--color);
 }
 
-.clockTwo {
+.neonTwo {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -123,6 +123,8 @@ body {
   background-color: #434343;
 }
 
-.clockTwo .circle {
-  
+.clockTwo {
+  display: flex;
+  gap: 40px;
+  color: #fff;
 }
