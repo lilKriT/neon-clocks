@@ -29,13 +29,17 @@ const secondsCircle = document.querySelector(
   ".neonTwo .circle:nth-child(3) circle:nth-of-type(2)"
 );
 
+const hourDot = document.querySelector(".neonTwo .circle:nth-child(1) .dot");
+const minDot = document.querySelector(".neonTwo .circle:nth-child(2) .dot");
+const secDot = document.querySelector(".neonTwo .circle:nth-child(3) .dot");
+
 setInterval(() => {
-  let h2 = new Date().getHours() % 12;
+  let h2 = new Date().getHours();
   let m2 = new Date().getMinutes();
   let s2 = new Date().getSeconds();
   let ampm2 = h2 >= 12 ? "pm" : "am";
 
-  hours2.innerHTML = String(h2).padStart(2, "0");
+  hours2.innerHTML = String(h2 % 12).padStart(2, "0");
   minutes2.innerHTML = String(m2).padStart(2, "0");
   seconds2.innerHTML = String(s2).padStart(2, "0");
   timeOfDay2.innerHTML = ampm2;
@@ -43,4 +47,8 @@ setInterval(() => {
   hoursCircle.style.strokeDashoffset = 440 - (440 * h2) / 12;
   minutesCircle.style.strokeDashoffset = 440 - (440 * m2) / 60;
   secondsCircle.style.strokeDashoffset = 440 - (440 * s2) / 60;
+
+  hourDot.style.transform = `rotate(${h2 * 30}deg)`;
+  minDot.style.transform = `rotate(${m2 * 6}deg)`;
+  secDot.style.transform = `rotate(${s2 * 6}deg)`;
 });
