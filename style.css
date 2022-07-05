@@ -21,7 +21,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  display: none;
 }
 
 .clockOne {
@@ -157,6 +156,7 @@ body {
 .clockTwo .circle svg circle:nth-child(2) {
   stroke: var(--color);
   stroke-dasharray: 440;
+  stroke-linecap: round;
 }
 
 .clockTwo .circle > div {
