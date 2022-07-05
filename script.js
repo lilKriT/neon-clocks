@@ -19,6 +19,16 @@ const minutes2 = document.querySelector(".neonTwo .minutes");
 const hours2 = document.querySelector(".neonTwo .hours");
 const timeOfDay2 = document.querySelector(".neonTwo .ampm");
 
+const hoursCircle = document.querySelector(
+  ".neonTwo .circle:nth-child(1) circle:nth-of-type(2)"
+);
+const minutesCircle = document.querySelector(
+  ".neonTwo .circle:nth-child(2) circle:nth-of-type(2)"
+);
+const secondsCircle = document.querySelector(
+  ".neonTwo .circle:nth-child(3) circle:nth-of-type(2)"
+);
+
 setInterval(() => {
   let h2 = new Date().getHours() % 12;
   let m2 = new Date().getMinutes();
@@ -29,4 +39,8 @@ setInterval(() => {
   minutes2.innerHTML = String(m2).padStart(2, "0");
   seconds2.innerHTML = String(s2).padStart(2, "0");
   timeOfDay2.innerHTML = ampm2;
+
+  hoursCircle.style.strokeDashoffset = 440 - (440 * h2) / 12;
+  minutesCircle.style.strokeDashoffset = 440 - (440 * m2) / 60;
+  secondsCircle.style.strokeDashoffset = 440 - (440 * s2) / 60;
 });
